@@ -14,17 +14,11 @@
     }
 
     const togglestate = (state) => {
-        if (state === 'fancy') {
-            switchbutton.state = 'simple';
-            switchbutton.innerHTML = buttonstates['simple'].label;
-            localStorage.state1xdeveloper = 'simple';
-            state = 'simple';
-        } else {
-            switchbutton.state = 'fancy';
-            localStorage.state1xdeveloper = 'fancy';
-            switchbutton.innerHTML = buttonstates['fancy'].label;
-            state = 'fancy';
-        }
+        let newstate = (state === 'fancy') ? 'simple' : 'fancy'; 
+        switchbutton.state = newstate;
+        switchbutton.innerHTML = buttonstates[newstate].label;
+        localStorage.state1xdeveloper = newstate;
+        state = newstate;
         setstate(state);
     }
 
@@ -38,7 +32,7 @@
     }
 
     const state = localStorage.state1xdeveloper || 'fancy';
-    const switchbutton = document.createElement("button");
+    const switchbutton = document.createElement('button');
     switchbutton.style.position = 'absolute';
     switchbutton.style.top = '10px';
     switchbutton.style.right = '10px';
