@@ -1,19 +1,31 @@
 (function(){
 
-    const togglestate = (state) => {
-        if (state === 'fancy') {
+    const setstate = (state) => {
+        if (state === 'simple') {
             document.querySelector('#fancy').rel = 'alternate';
             document.querySelector('#fancyresources').rel = 'alternate';
             document.querySelector('#basic').rel = 'stylesheet';
-            switchbutton.innerHTML = buttonstates['simple'].label;
-            switchbutton.state = 'simple';
-        } else {
+        } 
+        if (state === 'fancy') {
             document.querySelector('#fancy').rel = 'stylesheet';
             document.querySelector('#fancyresources').rel = 'stylesheet';
             document.querySelector('#basic').rel = 'alternate';
-            switchbutton.innerHTML = buttonstates['fancy'].label;
-            switchbutton.state = 'fancy';
         }
+    }
+
+    const togglestate = (state) => {
+        if (state === 'fancy') {
+            switchbutton.state = 'simple';
+            switchbutton.innerHTML = buttonstates['simple'].label;
+            localStorage.state1xdeveloper = 'simple';
+            state = 'simple';
+        } else {
+            switchbutton.state = 'fancy';
+            localStorage.state1xdeveloper = 'fancy';
+            switchbutton.innerHTML = buttonstates['fancy'].label;
+            state = 'fancy';
+        }
+        setstate(state);
     }
 
     const buttonstates = {
@@ -25,7 +37,7 @@
         }
     }
 
-    const state = 'fancy';
+    const state = localStorage.state1xdeveloper || 'fancy';
     const switchbutton = document.createElement("button");
     switchbutton.style.position = 'absolute';
     switchbutton.style.top = '10px';
@@ -33,6 +45,7 @@
     switchbutton.innerHTML = buttonstates[state].label;
     switchbutton.state = state;
     document.body.appendChild(switchbutton);
+    setstate(state);
 
     switchbutton.addEventListener('click', (ev) => {
         let but = ev.target;
