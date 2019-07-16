@@ -36,6 +36,7 @@
     switchbutton.style.position = 'absolute';
     switchbutton.style.top = '10px';
     switchbutton.style.right = '10px';
+    switchbutton.className = 'nes-btn';
     switchbutton.innerHTML = buttonstates[state].label;
     switchbutton.state = state;
     document.body.appendChild(switchbutton);
