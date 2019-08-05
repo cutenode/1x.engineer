@@ -1,0 +1,27 @@
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: "Press Start 2P";
+}
+
+body {
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 3em;
+  margin: 3em 1.5em 0 1.5em;
+}
+
+section:last-of-type {
+  margin-bottom: 3em;
+}
+
+li {
+  margin-top: 0.8em;
+}
