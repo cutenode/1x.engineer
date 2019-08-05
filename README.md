@@ -2,7 +2,7 @@
 
 # 1x.engineer
 
-This repo is the source of 1x.engineer, a website illustrating what a 1x engineer _really_ is.
+This repo is the source of [1x.engineer](http://1x.engineer/), a website illustrating what a 1x engineer _really_ is.
 
 ## Contributing
 
