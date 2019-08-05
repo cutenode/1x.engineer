@@ -5,7 +5,7 @@
             document.querySelector('#fancy').rel = 'alternate';
             document.querySelector('#fancyresources').rel = 'alternate';
             document.querySelector('#basic').rel = 'stylesheet';
-        } 
+        }
         if (state === 'fancy') {
             document.querySelector('#fancy').rel = 'stylesheet';
             document.querySelector('#fancyresources').rel = 'stylesheet';
@@ -14,7 +14,7 @@
     }
 
     const togglestate = (state) => {
-        let newstate = (state === 'fancy') ? 'simple' : 'fancy'; 
+        let newstate = (state === 'fancy') ? 'simple' : 'fancy';
         switchbutton.state = newstate;
         switchbutton.innerHTML = buttonstates[newstate].label;
         localStorage.state1xdeveloper = newstate;
@@ -25,7 +25,7 @@
     const buttonstates = {
         fancy: {
             label: 'switch to simple style'
-        }, 
+        },
         simple: {
             label: 'switch to fancy style'
         }
@@ -33,13 +33,13 @@
 
     const state = localStorage.state1xdeveloper || 'fancy';
     const switchbutton = document.createElement('button');
-    switchbutton.style.position = 'absolute';
-    switchbutton.style.top = '10px';
-    switchbutton.style.right = '10px';
+    const navBar = document.getElementsByTagName('nav')[0];
+    navBar.style.textAlign = 'right';
+    navBar.style.padding = '1.5em 1.5em 0 1.5em';
     switchbutton.className = 'nes-btn';
     switchbutton.innerHTML = buttonstates[state].label;
     switchbutton.state = state;
-    document.body.appendChild(switchbutton);
+    navBar.appendChild(switchbutton);
     setstate(state);
 
     switchbutton.addEventListener('click', (ev) => {
