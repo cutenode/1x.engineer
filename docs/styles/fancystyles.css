@@ -1,0 +1,78 @@
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: "Press Start 2P";
+}
+
+body {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 3em 1.5em 0 1.5em;
+  min-width: 320px;
+  max-width: 960px;
+}
+
+section:last-of-type {
+  padding-bottom: 3em;
+}
+
+.nes-container.with-title>.title {
+  margin: -2.6rem 0 0 -7px;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  margin-top: 0.8em;
+  list-style: none;
+  position: relative;
+}
+li:before {
+  content: "";
+  position: absolute;
+  left: -1em;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  background-color: black;
+}
+
+.nes-btn {
+  width: calc(100% - 8px);
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  .nes-btn {
+    width: auto;
+  }
+  #buttons {
+    display: flex;
+  }
+  #buttons a {
+    margin-right: 1em;
+    flex-grow: 1;
+  }
+  #buttons a:last-child {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  section {
+    margin: 0 auto;
+  }
+}
