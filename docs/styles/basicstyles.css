@@ -4,15 +4,18 @@ html {
     font-size: calc(.7em + 1vw);
     margin: 0;
     padding: 0;
-    background: #eee;
+    background: transparent url(../img/bg.simple.svg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 body {
     min-width: 330px;
     width: 60vw;
     margin: 1em auto;
+    font-family: Montserrat,sans-serif;
 }
 ul {
-    margin: 0;
+    margin: 1em 0;
 }
 p, li {
     font-size: .9em;
@@ -25,52 +28,99 @@ p:first-of-type {
     padding-top: 1em;
 }
 
-h1 {
-    background: #eee;
+h1, h2 {
     padding: 1em 0 0 0;
-    border-bottom: 5px solid #369;
     margin: 0;
     font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+    font-family: Raleway,sans-serif;
+    background-image: -webkit-gradient(linear,left bottom,left top,from(#b1a0c6),to(#99a0e1));
+    background-image: linear-gradient(0deg,#b1a0c6,#99a0e1);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-indent: 7px;
 }
+
 h2 {
-    margin: 0;
-    color: #369;
-    padding: .2em .5em;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+    font-size: 1.1rem;
 }
+
+h1:after, h2:after {
+    content: "";
+    display: block;
+    height: 2px;
+    opacity: .2;
+    width: 90%;
+    margin-left: 10%;
+    background-color: #000;
+}
+
 section {
-    background: #fff;
     display: block;
     margin: 0;
     padding: 0;
 }
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
 #buttons a {
-    background: #369;
-    color: #fff;
+    position: relative;
+}
+
+#buttons a, button {
+    color: #000;
     display: inline-block;
-    padding: 5px 10px;
+    padding: .8em 1.1em;
     text-decoration: none;
     margin-right: 1em;
+    opacity: .8;
+    font-size: .8rem;
 }
-#buttons a.is-success {
-    background: #396;
+
+#buttons a:before {
+    content: "";
+    background-image: -webkit-gradient(linear,left top,right top,from(#fc00ff),color-stop(#00dbde),color-stop(#00c9ff),to(#92fe9d));
+    background-image: linear-gradient(90deg,#fc00ff,#00dbde,#00c9ff,#92fe9d);
+    background-size: 400% 400%;
+    transition: all 600ms ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .2;
 }
-#buttons a.is-primary {
-    background: #936;
+
+#buttons a:after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: .2em;
+    z-index: -1;
+    opacity: .3;
 }
+
+#buttons a:hover:before {
+    animation: Gradient 15s ease infinite;
+}
+
 #buttons {
     text-align: center;
     margin: 1em 0;
     padding-bottom: 3em;
-}
-button {
-    border: none;
-    padding: .5em;
-    background: #369;
-    color: #fff;
-    font-size: 0.8em;    
 }
