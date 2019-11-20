@@ -33,13 +33,16 @@
 
     const state = localStorage.state1xdeveloper || 'fancy';
     const switchbutton = document.createElement('button');
-    const navBar = document.getElementsByTagName('nav')[0];
-    navBar.style.textAlign = 'right';
-    navBar.style.padding = '1.5em 1.5em 0 1.5em';
+    const main = document.getElementsByTagName('main')[0];
+    const div = document.createElement('div');
+    const firstChild = main.firstChild;
+    div.style.textAlign = 'right';
+    div.style.padding = '1.5em 1.5em 0 1.5em';
     switchbutton.className = 'nes-btn';
     switchbutton.innerHTML = buttonstates[state].label;
     switchbutton.state = state;
-    navBar.appendChild(switchbutton);
+    main.insertBefore(div, firstChild);
+    div.appendChild(switchbutton);
     setstate(state);
 
     switchbutton.addEventListener('click', (ev) => {
