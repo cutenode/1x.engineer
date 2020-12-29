@@ -7,6 +7,7 @@ html {
     background: transparent url(../img/bg.simple.svg);
     background-size: cover;
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 body {
     min-width: 330px;
@@ -73,6 +74,10 @@ section {
 	}
 }
 
+.nes-btn {
+    cursor: pointer;
+}
+
 #buttons a {
     position: relative;
 }
@@ -123,4 +128,37 @@ section {
     text-align: center;
     margin: 1em 0;
     padding-bottom: 3em;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #000000; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+        to right,
+        #000000,
+        #434343
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+        to right,
+        #000000,
+        #434343
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: white;
+    }
+    h1,
+    h2 {
+        background-image: -webkit-gradient(linear,left bottom,left top,from(#CAA1FE),to(#99a0e1));
+        background-image: linear-gradient(0deg, #CAA1FE, #99a0e1);
+    }
+
+    .nes-btn {
+        color: white;
+        background: #9a7fff;
+        border: none;
+    }
+
+    #buttons a {
+        opacity: initial;
+        color: white;
+    }
 }
