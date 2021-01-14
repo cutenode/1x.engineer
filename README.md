@@ -6,7 +6,7 @@ This repo is the source of [1x.engineer](http://1x.engineer/), a website illustr
 
 ## Contributing
 
-Want to help contribute to 1x.engineer? Cool! Feel free to PR whatever you think is appropriate and fitting with the theme, as long as your contributions are in-line with the project's [Code of Conduct](./CODE_OF_CONDUCT.md). I'll try to be on top of PRs, and will add those who get involved with the project beyond single PRs as collaborators.
+Want to help? Contribute to 1x.engineer? Cool! Feel free to PR whatever you think is appropriate and fitting with the theme, as long as your contributions are in-line with the project's [Code of Conduct](./CODE_OF_CONDUCT.md). I'll try to be on top of PRs and will add those who get involved with the project beyond single PRs as collaborators.
 
 ### New Traits
 
@@ -14,7 +14,7 @@ Feel free to add new traits of 1x developers. We generally try to keep traits fr
 
 ### Editing Traits
 
-If there are refinements that can be made to existing traits to make them more accurate or inclusive of 1x developers, please feel free to make them – your contributions are more than welcome.
+If there are refinements, that can be made to existing traits to make them more accurate or inclusive of 1x developers, please feel free to make them – your contributions are more than welcome.
 
 Additionally, if you feel that a trait doesn't represent 1x developers, please feel free to remove it and share why. This project goes both ways.
 
@@ -38,5 +38,5 @@ You can use the [styles options](https://shields.io/#styles) from the [Shields](
 
 - Brandon Olin, who [tweeted](https://twitter.com/devblackops/status/1149883098567331840) properties of a 1x engineer.
 - VC Dude, who [tweeted](https://twitter.com/skirani/status/1149302828420067328) about 10x engineers that got twitter super excited about revolting against the concept of 10x engineers.
-- [10x.engineer](http://10x.engineer/), for being awesome
-- [NES.CSS](https://nostalgic-css.github.io/NES.css/), for being really pretty
+- [10x.engineer](http://10x.engineer/), for being awesome.
+- [NES.CSS](https://nostalgic-css.github.io/NES.css/), for being really pretty.
