@@ -7,6 +7,10 @@ samp {
   font-family: "Press Start 2P";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 12px;
   margin: 0;
@@ -75,5 +79,28 @@ li:before {
   }
   section {
     margin: 0 auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  .nes-container {
+    border-color: white;
+  }
+
+  .nes-container.with-title > .title {
+    background: black;
+  }
+
+  li:before {
+    background-color: white;
+  }
+
+  .nes-btn:hover, .nes-btn:focus {
+    color: black;
   }
 }
