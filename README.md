@@ -38,5 +38,5 @@ You can use the [styles options](https://shields.io/#styles) from the [Shields](
 
 - Brandon Olin, who [tweeted](https://twitter.com/devblackops/status/1149883098567331840) properties of a 1x engineer.
 - VC Dude, who [tweeted](https://twitter.com/skirani/status/1149302828420067328) about 10x engineers that got twitter super excited about revolting against the concept of 10x engineers.
-- 10x.engineer, for being awesome (sadly the site is gone)
+- 10x.engineer, for being awesome (sadly the site is gone). [Web archive link](https://web.archive.org/web/20190225233752/http://10x.engineer/)
 - [NES.CSS](https://nostalgic-css.github.io/NES.css/), for being really pretty
