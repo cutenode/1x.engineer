@@ -14,7 +14,7 @@ body {
 }
 
 section {
-  padding: 3em 1.5em 0 1.5em;
+  padding: 3em 1.5em 2em 1.5em;
   min-width: 320px;
   max-width: 960px;
 }
@@ -25,6 +25,7 @@ section:last-of-type {
 
 .nes-container.with-title>.title {
   margin: -2.6rem 0 0 -7px;
+  font-size: 20px;
 }
 
 ul {
